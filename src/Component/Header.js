@@ -2,6 +2,7 @@ import React from "react";
 import mobileImage from "../assets/images/mobile.png";
 import Services from "../Component/Services";
 import $ from "jquery";
+// header updated
 
 function header() {
   $(function () {
