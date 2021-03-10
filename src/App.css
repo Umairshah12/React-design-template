@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
+@import url("/src/assets/css/header.css");
+@import url("/src/assets/css/services.css");
+@import url("/src/assets/css/work.css");
+@import url("/src/assets/css/testimonial.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --websiteColor: #103a6dde;
+  --textColor: #0f59b4de;
+  --whiteColor: #fff;
+  --workColor: #a6e8ea;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (max-width: 756px) {
+  .header-container {
+    width: 100%;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .mobile {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+  .row {
+    flex-direction: column;
+  }
+  .col-4 {
+    width: 100%;
+  }
+  .col-work {
+    width: 100%;
+    height: 100%;
+  }
+
+  .navigation {
+    position: fixed;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: var(--websiteColor);
+    width: 250px;
+    transform: translateX(250px);
+    transition: all 0.5s;
+  }
+
+  .navigation ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.5s;
+  }
+
+  .lines {
+    display: block;
+    cursor: pointer;
+    position: fixed;
+    right: 25px;
+    background-color: var(--websiteColor);
+  }
+
+  #openSidebar:checked ~ .navigation {
+    transform: translateX(0px);
   }
 }
