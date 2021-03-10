@@ -2,7 +2,7 @@
 
 # Online Link
 
-https://react-desgin-project.herokuapp.com/
+https://react-responsive-design.herokuapp.com/
 
 # Getting Started with Create React App
 
